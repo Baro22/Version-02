@@ -1,0 +1,412 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --primary-color: #3c83ff;
+  --secondary-color: #3d4b56;
+  --accent-color: #a3a3a3;
+  --background-color: #fafafa;
+  --white: #ffffff;
+  --text-color: rgb(85, 85, 85);
+  --font-family: "Poppins", sans-serif;
+  --transition-duration: 300ms;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* DARKMODE */
+body.dark {
+  --primary-color: #ff5722;
+  --secondary-color: #f5f5f5;
+  --accent-color: #888;
+  --background-color: #121212;
+  --white: #1e1e1e;
+  --text-color: #e0e0e0;
+}
+
+/* Für Icons in Dark Mode (invertiert die Farben) */
+body.dark .icon {
+  filter: brightness(0) invert(1);
+}
+
+
+/* TRANSITIONS */
+a,
+.btn {
+  transition: all var(--transition-duration) ease;
+}
+
+/* HEADER & NAVIGATION */
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Platzierung der Toggle-Buttons oben rechts */
+#controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+#controls button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform var(--transition-duration) ease;
+}
+
+#controls button:hover {
+  transform: scale(1.05);
+}
+
+nav,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  justify-content: space-around;
+  width: 100%;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 1.5rem;
+}
+
+/* LOGO */
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--white);
+  overflow: hidden;
+  max-height: 0;
+  transition: all var(--transition-duration) ease;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* SECTIONS */
+section {
+  padding-top: 4vh;
+  min-height: 96vh;
+  margin: 0 10rem;
+}
+
+/* SECTION TITLES & Texte über Title zentriert */
+.title,
+.section__text__p1 {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* NEUER LAYOUT-ANSATZ FÜR SECTION-CONTAINER (z. B. About-Sektion) */
+.section-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section__text {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* SOCIALS */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--secondary-color);
+  background: none;
+  cursor: pointer;#
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* ABOUT SECTION */
+#about {
+  position: relative;
+}
+
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.about-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-pic {
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  cursor: pointer;
+}
+
+/* DETAILS CONTAINER */
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--white);
+  border: 0.1rem solid var(--accent-color);
+  border-radius: 2rem;
+  text-align: center;
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  position: relative;
+}
+
+.color-container {
+  background: var(--background-color);
+  border: 0.1rem solid var(--accent-color);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: auto;
+}
+
+.project-title {
+  margin: 1rem;
+  color: var(--secondary-color);
+}
+
+.project-btn {
+  border: 0.1rem solid var(--accent-color);
+  background: none;
+  color: var(--secondary-color);
+}
+
+/* CONTACT SECTION */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem 0;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border: 0.1rem solid var(--accent-color);
+  border-radius: 2rem;
+  background: var(--white);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+/* FOOTER SECTION */
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: var(--white);
+  border-top: 0.1rem solid var(--accent-color);
+}

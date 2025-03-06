@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Baraa Sunjakdar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Toggle-Buttons oben rechts -->
+      <div id="controls">
+        <button id="darkModeToggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button id="languageToggle" onclick="toggleLanguage()">EN</button>
+      </div>
+      <nav id="desktop-nav">
+        <div class="logo">Baraa Sunjakdar</div>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav_about">Über mich</a></li>
+          <li><a href="#experience" data-i18n="nav_experience">Erfahrung</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projekte</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Baraa Sunjakdar</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu-links">
+            <li><a href="#about" data-i18n="nav_about" onclick="toggleMenu()">Über mich</a></li>
+            <li><a href="#experience" data-i18n="nav_experience" onclick="toggleMenu()">Erfahrung</a></li>
+            <li><a href="#projects" data-i18n="nav_projects" onclick="toggleMenu()">Projekte</a></li>
+            <li><a href="#contact" data-i18n="nav_contact" onclick="toggleMenu()">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="profile">
+        <div class="section__pic-container">
+          <img src="./assets/profile-pic.png" alt="Profilbild Baraa Sunjakdar" />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1" data-i18n="profile_greeting">Hallo, ich bin</p>
+          <h1 class="title" data-i18n="profile_title">Baraa Sunjakdar</h1>
+          <p class="section__text__p2" data-i18n="profile_subtitle">Softwareentwickler</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('./assets/Lebenslauf2024.pdf')" data-i18n="btn_cv">
+              Lebenslauf herunterladen
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='#contact'" data-i18n="btn_contact">
+              Kontakt
+            </button>
+          </div>
+          <div id="socials-container">
+            <img src="./assets/github.png" alt="Github" class="icon" onclick="location.href='https://github.com/'" />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <p class="section__text__p1" data-i18n="about_intro">Lerne mich kennen</p>
+        <h1 class="title" data-i18n="about_heading">Über mich</h1>
+        <div class="section-container">
+          <!-- Bild links -->
+          <div class="section__pic-container">
+            <img src="./assets/about-pic.png" alt="Über Baraa Sunjakdar" class="about-pic" />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img src="./assets/experience.png" alt="Erfahrungs-Icon" class="icon" />
+                <h3 data-i18n="about_experience_heading">Erfahrung</h3>
+                <p>1+ Jahre<br />Softwareentwicklung</p>
+              </div>
+              <div class="details-container">
+                <img src="./assets/education.png" alt="Bildungs-Icon" class="icon" />
+                <h3 data-i18n="about_education_heading">Ausbildung</h3>
+                <p>4. Semester<br />TU Dortmund</p>
+              </div>
+            </div>
+            <div class="text-container" data-i18n="about_text">
+              Ich bin ein leidenschaftlicher Softwareentwickler, der innovative und effiziente Lösungen für komplexe Herausforderungen entwickelt. Mit fundiertem Wissen in modernen Programmiersprachen und Frameworks setze ich auf sauberen, wartbaren Code und agile Methoden. Meine Projekte spiegeln meine Begeisterung für kontinuierliches Lernen und kreatives Problemlösen wider. Ich freue mich darauf, die digitale Zukunft aktiv mitzugestalten.
+            </div>
+          </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Pfeil" class="icon arrow" onclick="location.href='#experience'" />
+      </section>
+      <!-- Weitere Sektionen (Experience, Projects, Contact) bleiben im Prinzip unverändert -->
+      <section id="experience">
+        <p class="section__text__p1" data-i18n="experience_intro">Entdecke meine</p>
+        <h1 class="title" data-i18n="experience_heading">Erfahrung</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-i18n="exp_web">Webentwicklung</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>HTML</h3>
+                    <p data-i18n="skill_experienced">Erfahren</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>CSS</h3>
+                    <p data-i18n="skill_experienced">Erfahren</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p data-i18n="skill_intermediate">Fortgeschritten</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>Node.js</h3>
+                    <p data-i18n="skill_intermediate">Grundkenntnisse</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>Express.js</h3>
+                    <p data-i18n="skill_basic">Grundkenntnisse</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>React.js</h3>
+                    <p data-i18n="skill_intermediate">Fortgeschritten</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-i18n="exp_soft">Softwareentwicklung</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>C/C++</h3>
+                    <p data-i18n="skill_advanced">Experte</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>Python</h3>
+                    <p data-i18n="skill_advanced">Experte</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>Java</h3>
+                    <p data-i18n="skill_intermediate">Fortgeschritten</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                  <div>
+                    <h3>Git</h3>
+                    <p data-i18n="skill_intermediate">Fortgeschritten</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Pfeil" class="icon arrow" onclick="location.href='#projects'" />
+      </section>
+      <section id="projects">
+        <p class="section__text__p1" data-i18n="projects_intro">Sieh dir meine aktuellen</p>
+        <h1 class="title" data-i18n="projects_heading">Projekte</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/project-1.png" alt="Projekt Eins" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title" data-i18n="project_one">Projekt Eins</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" data-i18n="btn_github">
+                  Github
+                </button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" data-i18n="btn_live">
+                  Live-Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/project-2.png" alt="Projekt Zwei" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title" data-i18n="project_two">Projekt Zwei</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" data-i18n="btn_github">
+                  Github
+                </button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" data-i18n="btn_live">
+                  Live-Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/project-3.png" alt="Projekt Drei" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title" data-i18n="project_three">Projekt Drei</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" data-i18n="btn_github">
+                  Github
+                </button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" data-i18n="btn_live">
+                  Live-Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Pfeil" class="icon arrow" onclick="location.href='#contact'" />
+      </section>
+      <section id="contact">
+        <p class="section__text__p1" data-i18n="contact_intro">Nimm Kontakt auf</p>
+        <h1 class="title" data-i18n="contact_heading">Kontaktiere mich</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img src="./assets/email.png" alt="E-Mail" class="icon contact-icon email-icon" />
+            <p><a href="mailto:sunjakdarbaraa@gmail.com">sunjakdarbaraa@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img src="./assets/images.png" alt="Telefon" class="icon contact-icon" />
+            <p><a href="tel:+4901793798739">+49 0179 3798739</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about" data-i18n="nav_about">Über mich</a></li>
+            <li><a href="#experience" data-i18n="nav_experience">Erfahrung</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">Projekte</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>&copy; 2025 Baraa Sunjakdar. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
