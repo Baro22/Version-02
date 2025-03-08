@@ -32,7 +32,7 @@ const translations = {
     about_intro: "Lerne mich kennen",
     about_heading: "Über mich",
     about_experience_heading: "Erfahrung",
-    about_experience_value: "1+ Jahre/ Softwareentwicklung",
+    about_experience_value: "+1 Jahre/ Softwareentwicklung",
     about_education_heading: "Ausbildung",
     about_education_value: "4. Semester/ TU Dortmund",
     about_text:
@@ -69,7 +69,7 @@ const translations = {
     about_intro: "Get to know me",
     about_heading: "About Me",
     about_experience_heading: "Experience",
-    about_experience_value: "1+ Years/ Software Development",
+    about_experience_value: "+1 Years/ Software Development",
     about_education_heading: "Education",
     about_education_value: "4th Semester/ TU Dortmund",
     about_text:
