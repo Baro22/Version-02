@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body:not(.dark) .icon {
+  filter: invert(40%) sepia(100%) saturate(3000%) hue-rotate(205deg) brightness(105%) contrast(100%);
+}
+
 /* DARKMODE */
 body.dark {
   --primary-color: #ff5722;
@@ -36,7 +40,7 @@ body.dark {
 
 /* Für Icons in Dark Mode (invertiert die Farben) */
 body.dark .icon {
-  filter: brightness(0) invert(1);
+  filter: invert(46%) sepia(79%) saturate(5300%) hue-rotate(5deg) brightness(96%) contrast(101%);
 }
 
 
@@ -410,3 +414,5 @@ footer {
   background: var(--white);
   border-top: 0.1rem solid var(--accent-color);
 }
+
+

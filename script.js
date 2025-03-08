@@ -32,7 +32,9 @@ const translations = {
     about_intro: "Lerne mich kennen",
     about_heading: "Über mich",
     about_experience_heading: "Erfahrung",
+    about_experience_value: "1+ Jahre/ Softwareentwicklung",
     about_education_heading: "Ausbildung",
+    about_education_value: "4. Semester/ TU Dortmund",
     about_text:
       "Ich bin ein leidenschaftlicher Softwareentwickler, der innovative und effiziente Lösungen für komplexe Herausforderungen entwickelt. Mit fundiertem Wissen in modernen Programmiersprachen und Frameworks setze ich auf sauberen, wartbaren Code und agile Methoden. Meine Projekte spiegeln meine Begeisterung für kontinuierliches Lernen und kreatives Problemlösen wider. Ich freue mich darauf, die digitale Zukunft aktiv mitzugestalten.",
     experience_intro: "Entdecke meine",
@@ -67,7 +69,9 @@ const translations = {
     about_intro: "Get to know me",
     about_heading: "About Me",
     about_experience_heading: "Experience",
+    about_experience_value: "1+ Years/ Software Development",
     about_education_heading: "Education",
+    about_education_value: "4th Semester/ TU Dortmund",
     about_text:
       "I am a passionate software developer creating innovative and efficient solutions for complex challenges. With in-depth knowledge of modern programming languages and frameworks, I focus on clean, maintainable code and agile methodologies. My projects reflect my enthusiasm for continuous learning and creative problem-solving. I look forward to actively shaping the digital future.",
     experience_intro: "Explore my",
@@ -90,6 +94,7 @@ const translations = {
     footer_rights: "All Rights Reserved.",
   },
 };
+
 
 let currentLang = "de";
 
