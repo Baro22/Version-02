@@ -35,7 +35,7 @@ const translations = {
     about_experience_value: "1+ Jahre Softwareentwicklung",
     about_education_heading: "Ausbildung",
     about_education_value: "4. Semester TU Dortmund",
-    about_text: "Ich bin ein leidenschaftlicher Softwareentwickler, der innovative und effiziente Lösungen für komplexe Herausforderungen entwickelt. Mit fundiertem Wissen in modernen Programmiersprachen und Frameworks setze ich auf sauberen, wartbaren Code und agile Methoden. Meine Projekte spiegeln meine Begeisterung für kontinuierliches Lernen und kreatives Problemlösen wider. Ich freue mich darauf, die digitale Zukunft aktiv mitzugestalten.",
+    about_text: "Willkommen auf meinem Portfolio! Ich bin Student im 4. Semester an der TU Dortmund und leidenschaftlicher Softwareentwickler. Mit fundierten Kenntnissen in modernen Programmiersprachen, Frameworks und agilen Methoden entwickle ich effiziente und wartbare Softwarelösungen. Auf dieser Seite finden Sie eine Auswahl meiner Projekte, die mein Engagement für kreatives Problemlösen und kontinuierliches Lernen widerspiegeln. Ich freue mich darauf, gemeinsam die digitale Zukunft zu gestalten.",
     experience_intro: "Entdecke meine",
     experience_heading: "Erfahrung",
     exp_web: "Webentwicklung",
