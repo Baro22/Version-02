@@ -11,9 +11,9 @@ function toggleDarkMode() {
   document.body.classList.toggle("dark");
   const btn = document.getElementById("darkModeToggle");
   if (document.body.classList.contains("dark")) {
-    btn.textContent = "Light Mode";
+    btn.innerHTML = "☀️";
   } else {
-    btn.textContent = "Dark Mode";
+    btn.innerHTML = "🌙";
   }
 }
 
@@ -32,11 +32,10 @@ const translations = {
     about_intro: "Lerne mich kennen",
     about_heading: "Über mich",
     about_experience_heading: "Erfahrung",
-    about_experience_value: "+1 Jahre/ Softwareentwicklung",
+    about_experience_value: "1+ Jahre Softwareentwicklung",
     about_education_heading: "Ausbildung",
-    about_education_value: "4. Semester/ TU Dortmund",
-    about_text:
-      "Ich bin ein leidenschaftlicher Softwareentwickler, der innovative und effiziente Lösungen für komplexe Herausforderungen entwickelt. Mit fundiertem Wissen in modernen Programmiersprachen und Frameworks setze ich auf sauberen, wartbaren Code und agile Methoden. Meine Projekte spiegeln meine Begeisterung für kontinuierliches Lernen und kreatives Problemlösen wider. Ich freue mich darauf, die digitale Zukunft aktiv mitzugestalten.",
+    about_education_value: "4. Semester TU Dortmund",
+    about_text: "Ich bin ein leidenschaftlicher Softwareentwickler, der innovative und effiziente Lösungen für komplexe Herausforderungen entwickelt. Mit fundiertem Wissen in modernen Programmiersprachen und Frameworks setze ich auf sauberen, wartbaren Code und agile Methoden. Meine Projekte spiegeln meine Begeisterung für kontinuierliches Lernen und kreatives Problemlösen wider. Ich freue mich darauf, die digitale Zukunft aktiv mitzugestalten.",
     experience_intro: "Entdecke meine",
     experience_heading: "Erfahrung",
     exp_web: "Webentwicklung",
@@ -69,11 +68,10 @@ const translations = {
     about_intro: "Get to know me",
     about_heading: "About Me",
     about_experience_heading: "Experience",
-    about_experience_value: "+1 Years/ Software Development",
+    about_experience_value: "1+ Years Software Development",
     about_education_heading: "Education",
-    about_education_value: "4th Semester/ TU Dortmund",
-    about_text:
-      "I am a passionate software developer creating innovative and efficient solutions for complex challenges. With in-depth knowledge of modern programming languages and frameworks, I focus on clean, maintainable code and agile methodologies. My projects reflect my enthusiasm for continuous learning and creative problem-solving. I look forward to actively shaping the digital future.",
+    about_education_value: "4th Semester TU Dortmund",
+    about_text: "I am a passionate software developer creating innovative and efficient solutions for complex challenges. With in-depth knowledge of modern programming languages and frameworks, I focus on clean, maintainable code and agile methodologies. My projects reflect my enthusiasm for continuous learning and creative problem-solving. I look forward to actively shaping the digital future.",
     experience_intro: "Explore my",
     experience_heading: "Experience",
     exp_web: "Web Development",
@@ -95,7 +93,6 @@ const translations = {
   },
 };
 
-
 let currentLang = "de";
 
 // Aktualisiert alle Übersetzungen basierend auf currentLang
@@ -106,9 +103,7 @@ function updateTranslations() {
       el.textContent = translations[currentLang][key];
     }
   });
-  // Aktualisiere den Text des Sprachumschalters
-  document.getElementById("languageToggle").textContent =
-    currentLang === "de" ? "EN" : "DE";
+  document.getElementById("languageToggle").textContent = currentLang === "de" ? "EN" : "DE";
 }
 
 // Sprachumschalter: Wechselt die Sprache und aktualisiert die Übersetzungen
@@ -118,5 +113,20 @@ function toggleLanguage() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.add("dark");
+    document.getElementById("darkModeToggle").innerHTML = "☀️";
+  }
   updateTranslations();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(".fade-in").forEach((el) => {
+    observer.observe(el);
+  });
 });
+

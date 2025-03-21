@@ -1,121 +1,117 @@
 @media screen and (max-width: 1400px) {
-    #profile {
-      min-height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      min-height: fit-content;
-    }
+  #profile {
+    min-height: auto;
+    margin-bottom: 4rem;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-      margin: 0 auto;
-    }
-    /* .arrow {
-      display: none;
-    } */
-    section,
-    .section-container {
-      min-height: fit-content;
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 600px) {
-    /* In kleinen Bildschirmen soll der Container gestapelt werden */
-    .section-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    #contact,
-    footer {
-      min-height: 40vh;
-    }
-    #profile {
-      min-height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      min-height: fit-content;
-      margin-bottom: 2rem;
-    }
-    .nav-links{
-      padding: 0;
-    }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: start;
-      
-    }
+  #contact,
+  #projects {
+    min-height: auto;
   }
-  body.dark button {
-    color: #ffffff !important;
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
   }
-  
-  #controls button{
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+    margin: 0 auto;
+  }
+  section,
+  .section-container {
+    margin: 0 5%;
+    min-height: auto;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Container werden gestapelt */
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact,
+  footer {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  #profile {
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+  .nav-links {
+    padding: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: left;
+  }
+  /* Pfeilposition anpassen, damit er nicht außerhalb des Containers liegt */
+  .arrow {
+    position: relative;
+    right: 0;
+    margin-top: 2rem;
+  }
+  /* Optional: Schriftgrößen oder Padding weiter anpassen */
+  #controls button {
     padding: 0.5rem 0.5rem;
     font-size: 0.75rem;
-
   }
+}

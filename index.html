@@ -12,7 +12,7 @@
     <header>
       <!-- Toggle-Buttons oben rechts -->
       <div id="controls">
-        <button id="darkModeToggle" onclick="toggleDarkMode()">Dark Mode</button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
         <button id="languageToggle" onclick="toggleLanguage()">EN</button>
       </div>
       <nav id="desktop-nav">
@@ -63,7 +63,7 @@
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" class="fade-in">
         <p class="section__text__p1" data-i18n="about_intro">Lerne mich kennen</p>
         <h1 class="title" data-i18n="about_heading">Über mich</h1>
         <div class="section-container">
@@ -91,9 +91,8 @@
         </div>
         <img src="./assets/arrow.png" alt="Pfeil" class="icon arrow" onclick="location.href='#experience'" />
       </section>
-      
       <!-- Weitere Sektionen (Experience, Projects, Contact) bleiben im Prinzip unverändert -->
-      <section id="experience">
+      <section id="experience" class="fade-in">
         <p class="section__text__p1" data-i18n="experience_intro">Entdecke meine</p>
         <h1 class="title" data-i18n="experience_heading">Erfahrung</h1>
         <div class="experience-details-container">
@@ -182,7 +181,7 @@
         </div>
         <img src="./assets/arrow.png" alt="Pfeil" class="icon arrow" onclick="location.href='#projects'" />
       </section>
-      <section id="projects">
+      <section id="projects" class="fade-in">
         <p class="section__text__p1" data-i18n="projects_intro">Sieh dir meine aktuellen</p>
         <h1 class="title" data-i18n="projects_heading">Projekte</h1>
         <div class="experience-details-container">
@@ -196,7 +195,7 @@
                 <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Baro22/bildbearbeitung'" data-i18n="btn_github">
                   Github
                 </button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://bildbearbeitung.onrender.com'" data-i18n="btn_live">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://bildbearbeitung-main-hve8al88j-baro22s-projects.vercel.app/'" data-i18n="btn_live">
                   Live-Demo
                 </button>
               </div>
@@ -233,17 +232,17 @@
         </div>
         <img src="./assets/arrow.png" alt="Pfeil" class="icon arrow" onclick="location.href='#contact'" />
       </section>
-      <section id="contact">
+      <section id="contact" class="fade-in">
         <p class="section__text__p1" data-i18n="contact_intro">Nimm Kontakt auf</p>
         <h1 class="title" data-i18n="contact_heading">Kontaktiere mich</h1>
         <div class="contact-info-upper-container">
           <div class="contact-info-container">
             <img src="./assets/email.png" alt="E-Mail" class="icon contact-icon email-icon" />
-            <p><a href="mailto:sunjakdarbaraa@gmail.com">sunjakdarbaraa22@gmail.com</a></p>
+            <p><a href="mailto:sunjakdarbaraa22@gmail.com">sunjakdarbaraa22@gmail.com</a></p>
           </div>
           <div class="contact-info-container">
             <img src="./assets/phone-call-svgrepo-com.svg" alt="Telefon" class="icon contact-icon" />
-            <p><a href="tel:+4901793798739">+49 0179 3798739</a></p>
+            <p><a href="tel:+491793798739">+49 179 3798739</a></p>
           </div>
         </div>
       </section>
@@ -264,3 +263,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+

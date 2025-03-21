@@ -1,5 +1,5 @@
 /* GENERAL */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary-color: #3c83ff;
@@ -18,31 +18,22 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body:not(.dark) .icon {
-  filter: invert(40%) sepia(100%) saturate(3000%) hue-rotate(205deg) brightness(105%) contrast(100%);
-}
-
-/* DARKMODE */
+/* DARKMODE (Farbvariablen-Überschreibung) */
 body.dark {
-  --primary-color: #ff5722;
+  --primary-color: #3c83ff;
   --secondary-color: #f5f5f5;
   --accent-color: #888;
   --background-color: #121212;
   --white: #1e1e1e;
   --text-color: #e0e0e0;
 }
-
-/* Für Icons in Dark Mode (invertiert die Farben) */
-body.dark .icon {
-  filter: invert(46%) sepia(79%) saturate(5300%) hue-rotate(5deg) brightness(96%) contrast(101%);
-}
-
 
 /* TRANSITIONS */
 a,
@@ -76,7 +67,7 @@ header {
   color: var(--white);
   border-radius: 1rem;
   cursor: pointer;
-  transition: transform var(--transition-duration) ease;
+  transition: transform var(--transition-duration) ease, background-color var(--transition-duration) ease, color var(--transition-duration) ease;
 }
 
 #controls button:hover {
@@ -131,25 +122,39 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
-  width: 30px;
+  position: relative;
+  height: 2rem;
+  width: 2.5rem;
   cursor: pointer;
 }
 
 .hamburger-icon span {
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--secondary-color);
+  transition: transform var(--transition-duration) ease, opacity var(--transition-duration) ease;
 }
 
 .menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: var(--white);
-  overflow: hidden;
-  max-height: 0;
-  transition: all var(--transition-duration) ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-duration) ease;
+  z-index: 100;
+}
+
+.menu-links.open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .menu-links li {
@@ -158,25 +163,37 @@ a:hover {
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
   color: var(--secondary-color);
+  text-decoration: none;
 }
 
-.menu-links.open {
-  max-height: 300px;
+.menu-links a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .hamburger-icon.open span:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* SECTIONS */
@@ -249,6 +266,8 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  filter: invert(40%) sepia(100%) saturate(3000%) hue-rotate(205deg) brightness(105%) contrast(100%);
+  transition: filter var(--transition-duration) ease;
 }
 
 /* BUTTONS */
@@ -265,11 +284,22 @@ section {
   border-radius: 2rem;
   border: 0.1rem solid var(--secondary-color);
   background: none;
-  cursor: pointer;#
+  cursor: pointer;
 }
 
 .btn:hover {
   transform: scale(1.05);
+}
+
+.btn-color-1 {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+}
+
+.btn-color-2 {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .btn-color-1:hover,
@@ -288,6 +318,7 @@ section {
   gap: 2rem;
   margin: 2rem 0;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-details-container {
@@ -300,6 +331,7 @@ section {
   border-radius: 2rem;
   width: 100%;
   max-width: 400px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .arrow {
@@ -317,6 +349,7 @@ section {
   border: 0.1rem solid var(--accent-color);
   border-radius: 2rem;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* EXPERIENCE SECTION */
@@ -325,7 +358,7 @@ section {
 }
 
 .experience-sub-title {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
@@ -358,12 +391,14 @@ article {
 .color-container {
   background: var(--background-color);
   border: 0.1rem solid var(--accent-color);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .project-img {
   border-radius: 2rem;
   width: 90%;
   height: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .project-title {
@@ -395,6 +430,7 @@ article {
   background: var(--white);
   padding: 1rem;
   margin: 2rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .contact-info-container {
@@ -413,6 +449,41 @@ footer {
   text-align: center;
   background: var(--white);
   border-top: 0.1rem solid var(--accent-color);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
+
+/* ANIMATIONS */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+.arrow {
+  animation: bounce 2s infinite;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+#profile .section__pic-container,
+#profile .section__text {
+  opacity: 0;
+}
+#profile .section__pic-container {
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+#profile .section__text {
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
